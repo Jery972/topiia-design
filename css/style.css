@@ -656,6 +656,15 @@ footer {
   font-size: 0.6em;
   text-align: center;
 }
+#mentionLink {
+  color: #fff;
+  opacity: 0.4;
+  font-size: 0.6em;
+  text-align: center;
+}
+#mentionLink:hover {
+  opacity: 1;
+}
 
 /* FORM CONTACT */
 
@@ -700,6 +709,10 @@ textarea {
   font-weight: 500;
   border: 0;
 }
+#formContact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
 
 #submitButton {
   margin-top: 12px;
@@ -728,6 +741,21 @@ textarea {
   font-size: 0.78rem;
   font-weight: 500;
   /* border: 0; */
+}
+
+/* LEGAL SECTION */
+
+#legalSection {
+  padding-inline: 64px;
+  margin-top: 50px;
+}
+#legalContainer {
+  margin-inline: auto;
+  max-width: 1440px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* MEDIA QUERIES */
