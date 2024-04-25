@@ -53,7 +53,7 @@ header {
   z-index: 1;
 }
 
-header > img {
+header > a > img {
   height: 52px;
 }
 nav {
