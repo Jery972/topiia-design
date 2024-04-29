@@ -20,6 +20,13 @@ if (popupSpan) {
 
         const imageLinks = Array.from(tempDiv.querySelectorAll("#files li a"));
         imageLinks.shift();
+
+        for (let index = 0; index < imageLinks.length; index++) {
+          if (imageLinks[index].title === "htaccess") {
+            imageLinks.splice(index, 1);
+          }
+        }
+
         const totalImages = imageLinks.length;
 
         const totalPages = Math.ceil(totalImages / imagesPerPage);
