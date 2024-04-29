@@ -189,8 +189,8 @@ if (form) {
       }
 
       // Envoi du formulaire si tout est valide
-      alert("Le formulaire a été envoyé avec succès !"); // Remplacer par votre code d'envoi réel
-      // form.submit(); // Utiliser cette ligne pour envoyer le formulaire réellement
+      // alert("Le formulaire a été envoyé avec succès !"); // Remplacer par votre code d'envoi réel
+      form.submit(); // Utiliser cette ligne pour envoyer le formulaire réellement
     });
   });
 }
