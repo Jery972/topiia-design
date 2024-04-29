@@ -269,7 +269,7 @@ nav {
 /* INTRO SECTION */
 #introSection {
   padding-inline: 64px;
-  margin-bottom: 196px;
+  margin-bottom: 166px;
 }
 #introContainer {
   margin-inline: auto;
@@ -291,6 +291,7 @@ nav {
 }
 #introRightContainer p {
   font-size: 0.78rem;
+
   opacity: 0.7;
   line-height: 33px;
   font-weight: 500;
@@ -342,6 +343,7 @@ nav {
 }
 
 #galleryHeader {
+  padding-top: 30px;
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -360,6 +362,7 @@ nav {
   display: block;
   color: #60666d;
   width: 250px;
+  z-index: 2;
 }
 
 .select-box__current {
@@ -689,6 +692,11 @@ footer {
   gap: 82px;
   margin-bottom: 80px;
 }
+#formContainer > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 #LeftFormContainer {
   max-width: 580px;
 }
@@ -875,13 +883,128 @@ textarea {
     overflow: hidden;
     transition: left 0.3s ease; /* Ajout d'une transition pour une animation fluide */
     padding: 40px 15%;
+    border: #127cc6 1px solid;
+    z-index: 10;
   }
   .menuLink {
     font-size: 0.9rem;
+  }
+  .select-box {
+    width: auto;
   }
 
   /* Ajoutez un style pour afficher le menu lorsqu'il est ouvert */
   #menu.open {
     left: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    #serviceContainer {
+      flex-direction: column;
+      margin-inline: 10%;
+    }
+    #zoneContainer {
+      flex-direction: column;
+    }
+    #footerDescription {
+      flex-direction: column;
+    }
+    #footerDescription > div {
+      margin-inline: auto;
+    }
+    #footerSocial {
+      margin-inline: auto;
+    }
+    #footerInfo {
+      margin-bottom: 20px;
+    }
+    #footerMessage {
+      text-align: center;
+    }
+    #footerMessage > div {
+      margin-inline: auto;
+    }
+    .simpleLine {
+      margin-top: 8px;
+      width: 160px;
+      height: 2px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      line-height: 33px;
+    }
+    .select-box__input-text {
+      font-size: 0.7rem;
+    }
+    .select-box {
+      margin-bottom: 0px;
+    }
+    #galleryPictures {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #formContainer > div > img {
+      display: none;
+    }
+    #formContainer {
+      gap: 0px;
+    }
+    #numbersContainer {
+      flex-direction: column;
+      text-align: center;
+    }
+    header {
+      padding-inline: 20px;
+      padding-bottom: 16px;
+      padding-top: 16px;
+    }
+    header > a > img {
+      height: 40px;
+    }
+    .introLogoContainer span {
+      line-height: 16px;
+    }
+    #zoneSection {
+      margin-bottom: 24px;
+    }
+    #footerContainer > img {
+      margin-bottom: 30px;
+      width: 140px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    #wrapLogoContainer {
+      grid-template-columns: none;
+      justify-content: center;
+      gap: 20px;
+    }
+    #serviceSection {
+      margin-bottom: 60px;
+    }
+    #gallerySection {
+      margin-bottom: 60px;
+    }
+    #introSection {
+      margin-bottom: 60px;
+    }
+    #introRightContainer p {
+      margin-bottom: 40px;
+    }
+    #formSection {
+      padding-inline: 34px;
+    }
+    footer {
+      padding-inline: 30px;
+    }
+    #galleryHeader {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    #galleryPictures {
+      margin-top: 24px;
+    }
+    #footerInfo {
+      flex-direction: column;
+    }
   }
 }
