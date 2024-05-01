@@ -10,7 +10,8 @@ if (popupSpan) {
   const imagesPerPage = 10;
 
   function loadGalleryImages(folder) {
-    const imagePath = `images/galleryPictures/${folder}/`;
+    const imagePath = `/images/galleryPictures/${folder}/`;
+    console.log(imagePath);
 
     fetch(imagePath)
       .then((response) => response.text())
@@ -21,11 +22,12 @@ if (popupSpan) {
         const imageLinks = Array.from(tempDiv.querySelectorAll("#files li a"));
         imageLinks.shift();
 
-        for (let index = 0; index < imageLinks.length; index++) {
-          if (imageLinks[index].title === "htaccess") {
-            imageLinks.splice(index, 1);
-          }
-        }
+        // for (let index = 0; index < imageLinks.length; index++) {
+        //   console.log(imageLinks[index].title);
+        //   if (imageLinks[index].title === "htaccess") {
+        //     imageLinks.splice(index, 1);
+        //   }
+        // }
 
         const totalImages = imageLinks.length;
 
