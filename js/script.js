@@ -11,7 +11,7 @@ if (popupSpan) {
 
   function loadGalleryImages(folder) {
     const imagePath = `/images/galleryPictures/${folder}/`;
-    console.log(imagePath);
+    // const imagePath = `/images/galleryPictures/vitre/`;
 
     fetch(imagePath)
       .then((response) => response.text())
@@ -19,8 +19,9 @@ if (popupSpan) {
         const tempDiv = document.createElement("div");
         tempDiv.innerHTML = html;
 
-        const imageLinks = Array.from(tempDiv.querySelectorAll("#files li a"));
-        imageLinks.shift();
+        const imageLinks = Array.from(tempDiv.querySelectorAll("a"));
+        // console.log(imageLinks);
+        // imageLinks.shift();
 
         // for (let index = 0; index < imageLinks.length; index++) {
         //   console.log(imageLinks[index].title);
@@ -28,7 +29,7 @@ if (popupSpan) {
         //     imageLinks.splice(index, 1);
         //   }
         // }
-
+        imageLinks.splice(0, 5);
         const totalImages = imageLinks.length;
 
         const totalPages = Math.ceil(totalImages / imagesPerPage);
@@ -50,14 +51,14 @@ if (popupSpan) {
         }
 
         // Afficher les images de la page actuelle
-        displayImages(imageLinks, totalImages, totalPages);
+        displayImages(imageLinks, totalImages, totalPages, folder);
       })
       .catch((error) =>
         console.error("Erreur lors de la récupération du contenu HTML :", error)
       );
   }
 
-  function displayImages(imageLinks, totalImages, totalPages) {
+  function displayImages(imageLinks, totalImages, totalPages, folder) {
     const startIndex = (currentPage - 1) * imagesPerPage;
     const endIndex = Math.min(startIndex + imagesPerPage, totalImages);
 
@@ -70,7 +71,8 @@ if (popupSpan) {
       const imgElement = document.createElement("img");
       const fileName = link.textContent.split(".")[0];
 
-      imgElement.src = link.href;
+      imgElement.src =
+        `/images/galleryPictures/${folder}/` + link.getAttribute("href");
       imgElement.alt = fileName;
 
       const imageGalleryDiv = document.createElement("div");
