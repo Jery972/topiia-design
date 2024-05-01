@@ -899,6 +899,11 @@ textarea {
   }
 
   @media screen and (max-width: 480px) {
+    #galleryHeader {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
     #serviceContainer {
       flex-direction: column;
       margin-inline: 10%;
@@ -995,11 +1000,7 @@ textarea {
     footer {
       padding-inline: 30px;
     }
-    #galleryHeader {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
+
     #galleryPictures {
       margin-top: 24px;
     }
