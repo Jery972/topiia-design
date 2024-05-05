@@ -205,7 +205,7 @@ nav {
   position: absolute;
   top: -80px;
 }
-#serviceSection {
+#serviceSectionDesktop {
   position: relative;
   margin-top: -20px;
   padding-inline: 64px;
@@ -216,6 +216,9 @@ nav {
   gap: 26px;
   margin-inline: auto;
   max-width: 1440px;
+}
+#serviceSectionMobile {
+  display: none;
 }
 
 /* STYLE BUTTON ZOOM */
@@ -788,7 +791,7 @@ textarea {
   #homeContainer {
     padding-inline: 40px;
   }
-  #serviceSection {
+  #serviceSectionDesktop {
     padding-inline: 40px;
   }
   #introSection {
@@ -841,11 +844,10 @@ textarea {
   .imageZoom span {
     font-size: 0.6rem;
   }
-
   #introContainer {
     flex-direction: column-reverse;
   }
-  #serviceSection {
+  #serviceSectionDesktop {
     margin-bottom: 100px;
   }
   #introSection {
@@ -859,6 +861,9 @@ textarea {
   }
   #menu {
     gap: 12px;
+  }
+  .imageZoom span::after {
+    width: 80%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -897,115 +902,158 @@ textarea {
   #menu.open {
     left: 0;
   }
+}
 
-  @media screen and (max-width: 480px) {
-    #galleryHeader {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    #serviceContainer {
-      flex-direction: column;
-      margin-inline: 10%;
-    }
-    #zoneContainer {
-      flex-direction: column;
-    }
-    #footerDescription {
-      flex-direction: column;
-    }
-    #footerDescription > div {
-      margin-inline: auto;
-    }
-    #footerSocial {
-      margin-inline: auto;
-    }
-    #footerInfo {
-      margin-bottom: 20px;
-    }
-    #footerMessage {
-      text-align: center;
-    }
-    #footerMessage > div {
-      margin-inline: auto;
-    }
-    .simpleLine {
-      margin-top: 8px;
-      width: 160px;
-      height: 2px;
-    }
-    h1 {
-      font-size: 1.4rem;
-      line-height: 33px;
-    }
-    .select-box__input-text {
-      font-size: 0.7rem;
-    }
-    .select-box {
-      margin-bottom: 0px;
-    }
-    #galleryPictures {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    #formContainer > div > img {
-      display: none;
-    }
-    #formContainer {
-      gap: 0px;
-    }
-    #numbersContainer {
-      flex-direction: column;
-      text-align: center;
-    }
-    header {
-      padding-inline: 20px;
-      padding-bottom: 16px;
-      padding-top: 16px;
-    }
-    header > a > img {
-      height: 40px;
-    }
-    .introLogoContainer span {
-      line-height: 16px;
-    }
-    #zoneSection {
-      margin-bottom: 24px;
-    }
-    #footerContainer > img {
-      margin-bottom: 30px;
-      width: 140px;
-    }
+@media screen and (max-width: 480px) {
+  #galleryHeader {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
-  @media screen and (max-width: 400px) {
-    #wrapLogoContainer {
-      grid-template-columns: none;
-      justify-content: center;
-      gap: 20px;
-    }
-    #serviceSection {
-      margin-bottom: 60px;
-    }
-    #gallerySection {
-      margin-bottom: 60px;
-    }
-    #introSection {
-      margin-bottom: 60px;
-    }
-    #introRightContainer p {
-      margin-bottom: 40px;
-    }
-    #formSection {
-      padding-inline: 34px;
-    }
-    footer {
-      padding-inline: 30px;
-    }
+  #serviceContainer {
+    flex-direction: column;
+    margin-inline: 10%;
+  }
+  #zoneContainer {
+    flex-direction: column;
+  }
+  #footerDescription {
+    flex-direction: column;
+  }
+  #footerDescription > div {
+    margin-inline: auto;
+  }
+  #footerSocial {
+    margin-inline: auto;
+  }
+  #footerInfo {
+    margin-bottom: 20px;
+  }
+  #footerMessage {
+    text-align: center;
+  }
+  #footerMessage > div {
+    margin-inline: auto;
+  }
+  .simpleLine {
+    margin-top: 8px;
+    width: 160px;
+    height: 2px;
+  }
+  h1 {
+    font-size: 1.4rem;
+    line-height: 33px;
+  }
+  .select-box__input-text {
+    font-size: 0.7rem;
+  }
+  .select-box {
+    margin-bottom: 0px;
+  }
+  #galleryPictures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #formContainer > div > img {
+    display: none;
+  }
+  #formContainer {
+    gap: 0px;
+  }
+  #numbersContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  header {
+    padding-inline: 20px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+  header > a > img {
+    height: 40px;
+  }
+  .introLogoContainer span {
+    line-height: 16px;
+  }
+  #zoneSection {
+    margin-bottom: 24px;
+  }
+  #footerContainer > img {
+    margin-bottom: 30px;
+    width: 140px;
+  }
+  #homeSection {
+    padding-bottom: 120px;
+  }
+  #serviceSectionDesktop {
+    display: none;
+  }
+  #serviceSectionMobile {
+    display: block;
+    padding-inline: 40px;
+    margin-bottom: 60px;
+  }
+  .swiper-pagination-bullet {
+    background: white;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--color1);
+  }
 
-    #galleryPictures {
-      margin-top: 24px;
-    }
-    #footerInfo {
-      flex-direction: column;
-    }
+  .imageZoom span {
+    position: absolute;
+    bottom: 56px;
+    left: 56px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: 0s;
+    transform: scale(1.165);
+  }
+  .imageZoom span::after {
+    content: "";
+    position: absolute;
+    width: 110%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0px;
+  }
+  .imageZoom:hover img {
+    transform: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #wrapLogoContainer {
+    grid-template-columns: none;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #gallerySection {
+    margin-bottom: 60px;
+  }
+  #introSection {
+    margin-bottom: 60px;
+  }
+  #introRightContainer p {
+    margin-bottom: 40px;
+  }
+  #formSection {
+    padding-inline: 34px;
+  }
+  footer {
+    padding-inline: 30px;
+  }
+
+  #galleryPictures {
+    margin-top: 24px;
+  }
+  #footerInfo {
+    flex-direction: column;
   }
 }

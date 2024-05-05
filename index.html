@@ -65,6 +65,11 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -132,7 +137,7 @@
         </div>
         <div id="gradientHome"></div>
       </section>
-      <section id="serviceSection">
+      <section id="serviceSectionDesktop">
         <div id="ancreSection"></div>
         <div id="serviceContainer">
           <a class="imageZoom" href="#gallerySection" data-index="0">
@@ -147,6 +152,35 @@
             <img src="images/work3.png" alt="Un logo designé" />
             <span>FLOCAGE TEXTILE</span>
           </a>
+        </div>
+      </section>
+      <section id="serviceSectionMobile">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a class="imageZoom" href="#gallerySection" data-index="0">
+                <img src="images/work1.png" alt="Une pose de vitre teinté" />
+                <span>LES VITRES TEINTÉES</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="imageZoom" href="#gallerySection" data-index="1">
+                <img src="images/work2.png" alt="Un travail de designing" />
+                <span>CRÉATION GRAPHIQUE</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a class="imageZoom" href="#gallerySection" data-index="2">
+                <img src="images/work3.png" alt="Un logo designé" />
+                <span>FLOCAGE TEXTILE</span>
+              </a>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section id="introSection">
@@ -354,6 +388,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/swiper.js" defer></script>
     <script type="text/javascript" src="js/menu.js" defer></script>
     <script type="text/javascript" src="js/gallery.js" defer></script>
     <script type="text/javascript">
