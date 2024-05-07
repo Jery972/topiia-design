@@ -1002,7 +1002,7 @@ textarea {
   .imageZoom span {
     position: absolute;
     bottom: 56px;
-    left: 56px;
+    left: 30px;
     font-size: 0.875rem;
     font-weight: 600;
     transition: 0s;
