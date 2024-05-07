@@ -989,6 +989,7 @@ textarea {
   }
   #serviceSectionMobile {
     display: block;
+    position: relative;
     padding-inline: 40px;
     margin-bottom: 60px;
   }
